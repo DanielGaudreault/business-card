@@ -21,132 +21,42 @@
             background-image: url('1920_1080_Black.jpg');
             background-size: cover;
             background-position: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the footer stays at the bottom */
         }
-        .side-tab {
-            position: fixed;
-            top: -100%; /* Start above the viewport */
-            right: 20px;
-            background-color: #1976d2;
-            padding: 20px;
-            z-index: 999;
-            display: none; /* Initially hidden */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            transition: top 0.5s ease; /* Transition for top property */
-            margin-top: 10px; /* Add margin */
-        }
-        .side-tab.active {
-            top: 60px; /* Move into view */
-            display: block; /* Show when active */
-        }
-        .side-tab a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .side-tab a:hover {
-            background-color: #1565c0;
-        }
-        .home-link {
-            position: absolute;
-            top: 10px; /* Adjusted position */
-            left: 20px;
-            z-index: 999;
-            cursor: pointer;
-            margin-top: -10px; /* Adjusted negative margin */
-        }
-        .home-link img {
-            width: 80px; /* Increased size */
-            height: auto;
-        }
-        .hero-section {
-            height: 80vh; /* Adjusted height */
+
+        .main-content {
+            flex: 1; /* Takes up remaining space, pushing footer to the bottom */
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .contact-info {
             text-align: center;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.5); /* Add background color with opacity */
-        }
-        .hero-content {
-            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional, gives some contrast */
             padding: 20px;
+            border-radius: 8px;
         }
-        .hero-content h1 {
-            font-size: 40px; /* Adjusted font size */
-            margin-bottom: 20px;
-        }
-        .hero-content p {
-            font-size: 18px; /* Adjusted font size */
-            margin-bottom: 30px;
-            color: #f0f0f0;
-        }
-        .intro-section {
-            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
-            padding: 50px 0;
-            text-align: center;
-        }
-        .intro-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .intro-content h2 {
-            font-size: 36px;
-            color: #fff; /* White text */
-            margin-bottom: 20px;
-        }
-        .intro-content p {
-            font-size: 18px;
-            color: #f0f0f0; /* Light gray text */
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        .skills-section {
-            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
-            padding: 50px 0;
-            text-align: center;
-        }
-        .skills-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .skills-content h2 {
-            font-size: 36px;
-            color: #fff; /* White text */
-            margin-bottom: 20px;
-        }
-        .skills-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        .skills-list li {
-            display: inline-block;
-            margin: 10px;
-            font-size: 18px;
-            color: #f0f0f0; /* Light gray text */
-        }
+
         footer {
             background-color: red; /* Changed to red */
             color: #fff;
             padding: 40px 0;
             text-align: center;
         }
+
         footer p {
             margin: 0;
             font-size: 16px;
         }
+
         .social-icons {
             margin-top: 20px;
         }
+
         .social-icon {
             color: #fff;
             font-size: 24px;
@@ -154,6 +64,7 @@
             transition: color 0.3s ease;
             cursor: pointer; /* Add cursor pointer */
         }
+
         .social-icon:hover {
             color: #ffd54f; /* Yellow */
         }
@@ -164,7 +75,6 @@
         <img src="images/capmatic.png" alt="Home">
     </div>
 
-
     <div class="main-content">
         <section class="contact-info">
             <h2>Contact Information</h2>
@@ -174,7 +84,6 @@
             <p>Web: www.capmatic.com</p>
         </section>
     </div>
-
 
     <footer>
         <p>&copy; 2024 Daniel Gaudreault. All rights reserved.</p>
