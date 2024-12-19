@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert library -->
+    <link rel="icon" type="image/png" href="images/main logo 2.png"> <!-- Updated Favicon -->
+    <!-- For iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <!-- For Android -->
+    <link rel="manifest" href="manifest.json"> <!-- Manifest file for PWA -->
+    <style>
+        /* Additional CSS styles specific to the home page */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/city 2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .side-tab {
+            position: fixed;
+            top: -100%; /* Start above the viewport */
+            right: 20px;
+            background-color: #1976d2;
+            padding: 20px;
+            z-index: 999;
+            display: none; /* Initially hidden */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: top 0.5s ease; /* Transition for top property */
+            margin-top: 10px; /* Add margin */
+        }
+        .side-tab.active {
+            top: 60px; /* Move into view */
+            display: block; /* Show when active */
+        }
+        .side-tab a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .side-tab a:hover {
+            background-color: #1565c0;
+        }
+        .home-link {
+            position: absolute;
+            top: 10px; /* Adjusted position */
+            left: 20px;
+            z-index: 999;
+            cursor: pointer;
+            margin-top: -10px; /* Adjusted negative margin */
+        }
+        .home-link img {
+            width: 80px; /* Increased size */
+            height: auto;
+        }
+        .hero-section {
+            height: 80vh; /* Adjusted height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5); /* Add background color with opacity */
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero-content h1 {
+            font-size: 40px; /* Adjusted font size */
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 18px; /* Adjusted font size */
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+        .intro-section {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            padding: 50px 0;
+            text-align: center;
+        }
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .intro-content h2 {
+            font-size: 36px;
+            color: #fff; /* White text */
+            margin-bottom: 20px;
+        }
+        .intro-content p {
+            font-size: 18px;
+            color: #f0f0f0; /* Light gray text */
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .skills-section {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+            padding: 50px 0;
+            text-align: center;
+        }
+        .skills-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .skills-content h2 {
+            font-size: 36px;
+            color: #fff; /* White text */
+            margin-bottom: 20px;
+        }
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .skills-list li {
+            display: inline-block;
+            margin: 10px;
+            font-size: 18px;
+            color: #f0f0f0; /* Light gray text */
+        }
+        footer {
+            background-color: #1976d2; /* Blue */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icon {
+            color: #fff;
+            font-size: 24px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+            cursor: pointer; /* Add cursor pointer */
+        }
+        .social-icon:hover {
+            color: #ffd54f; /* Yellow */
+        }
+    </style>
+</head>
+<body>
+    <div class="home-link" onclick="goToHomePage()">
+        <img src="images/main logo 2.png" alt="Home">
+    </div>
+
+    <!-- Side Tab for Navigation -->
+    <div class="side-tab">
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm Daniel, a passionate web developer based in Montreal. Let's build something amazing together!</p>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="intro-content">
+            <h2>Hi, I'm Daniel</h2>
+            <p>Welcome to my portfolio website! I'm a passionate web developer based in Montreal. With four years of experience, I specialize in front-end development, UI/UX design, and responsive web design. My goal is to create meaningful and user-friendly web experiences that make a difference.</p>
+            <p>When I'm not coding, I enjoy exploring new technologies, hiking in nature, and experimenting with cooking recipes.</p>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <div class="skills-content">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>SQL</li>
+                <li>Git</li>
+                <li>Responsive Web Design</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Daniel Gaudreault. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/dan.gaudreault/" class="social-icon" onclick="showMessage('Facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/DGmovement87" class="social-icon" onclick="showMessage('Twitter')"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-gaudreault-373b67203/" class="social-icon" onclick="showMessage('LinkedIn')"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DanielGaudreault/mywebsite" class="social-icon" onclick="showMessage('GitHub')"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/dgmovement87/" class="social-icon" onclick="showMessage('Instagram')"><i class="fab fa-instagram"></i></a>
+            <a href="https://m.me/dan.gaudreault" class="social-icon" onclick="showMessage('Messenger')"><i class="fab fa-facebook-messenger"></i></a>
+            <!-- Add more social icons as needed -->
+        </div>
+    </footer>
+
+    <script>
+        // Function to display popup message
+        function showMessage(platform) {
+            Swal.fire({
+                title: platform,
+                text: 'You clicked on ' + platform,
+                icon: 'info',
+                confirmButtonText: 'Close'
+            });
+        }
+
+        // Function to navigate to home page
+        function goToHomePage() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
