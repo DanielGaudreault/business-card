@@ -44,10 +44,6 @@ This repository contains the code and assets for my personal/business card websi
 
 Feel free to fork this repository and create a pull request with your improvements. Suggestions and bug reports are welcome!
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 For any inquiries or feedback, please contact me at [your-email@example.com].
