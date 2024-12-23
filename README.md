@@ -19,7 +19,7 @@ This repository contains the code and assets for my personal/business card websi
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/yourusername/your-repo-name](https://danielgaudreault.github.io/business-card/index.html.git
    ```
 2. Navigate to the project directory:
    ```bash
