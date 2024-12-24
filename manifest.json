@@ -1,0 +1,14 @@
+{
+  "icons": [
+    {
+      "src": "images/capmatic.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/capmatic.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
