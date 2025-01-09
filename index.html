@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Daniel Gaudreault's business card with contact info for packaging machinery solutions.">
     <meta name="keywords" content="packaging machinery, robotic solutions, Montreal, Capmatic">
-    <title>My Business Card</title>
+    <title>Daniel Gaudreault - Business Card</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert library -->
-
-    <!-- App Icons -->
-    <link rel="icon" type="image/png" href="images/capmatic.png"> <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/capmatic.png"> <!-- iOS App Icon -->
-    <link rel="manifest" href="manifest.json"> <!-- Manifest file for PWA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/png" href="images/capmatic.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/capmatic.png">
+    <link rel="manifest" href="manifest.json">
 
     <style>
         :root {
-            --primary-color: red;
+            --primary-color: #D32F2F; /* A deeper red */
+            --secondary-color: #FFC107; /* Gold for accents */
             --text-color: white;
+            --background-color: rgba(0, 0, 0, 0.8);
             --padding-small: 10px;
             --padding-medium: 20px;
             --padding-large: 30px;
@@ -48,8 +48,8 @@
         }
 
         .home-link img {
-            width: 100px; /* Increased size for the icon on larger screens */
-            height: 100px;
+            width: 80px;
+            height: 80px;
         }
 
         .main-content {
@@ -57,45 +57,46 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: var(--padding-medium) var(--padding-small);
+            padding: var(--padding-medium);
         }
 
         .contact-info {
             text-align: center;
             color: var(--text-color);
-            background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for better readability on mobile */
-            padding: var(--padding-small);
-            border-radius: 8px;
-            width: 95%; /* Increased width for smaller screens */
-            max-width: 600px; /* Still keep a max-width for larger screens */
-            box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Added shadow for depth on mobile */
+            background-color: var(--background-color);
+            padding: var(--padding-large);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .contact-info h2 {
             color: var(--primary-color);
-            font-size: 1.5em;
+            font-size: 2em;
             margin-bottom: var(--padding-small);
         }
 
         .contact-info h3 {
-            color: var(--primary-color);
+            color: var(--secondary-color);
             font-size: 1.2em;
             margin-top: var(--padding-small);
-            font-weight: normal;
+            font-weight: 600;
         }
 
         .contact-info p {
-            margin: 5px 0;
+            margin: 10px 0;
             font-size: 0.9em;
         }
 
         .contact-info a {
             color: var(--text-color);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            color: var(--secondary-color);
         }
 
         footer {
@@ -126,31 +127,31 @@
         }
 
         .social-icon:hover {
-            color: #ffd54f;
+            color: var(--secondary-color);
         }
 
         @media screen and (max-width: 768px) {
             .contact-info {
-                padding: var(--padding-small);
+                padding: var(--padding-medium);
             }
             .contact-info h2 {
-                font-size: 1.3em;
+                font-size: 1.5em;
             }
             .contact-info h3 {
                 font-size: 1em;
             }
             .home-link img {
-                width: 70px; /* Adjusted size for medium-sized mobile devices */
-                height: 70px;
+                width: 60px;
+                height: 60px;
             }
         }
 
         @media screen and (max-width: 480px) {
             body {
-                font-size: var(--font-size-base) * 0.9; /* Slightly smaller base font size */
+                font-size: 14px;
             }
             .contact-info {
-                padding: calc(var(--padding-small) / 2);
+                padding: var(--padding-small);
             }
             .contact-info p {
                 font-size: 0.8em;
@@ -162,7 +163,7 @@
                 font-size: 0.7em;
             }
             .home-link img {
-                width: 50px; /* Adjusted size for smaller screens while still being large */
+                width: 50px;
                 height: 50px;
             }
         }
@@ -176,11 +177,12 @@
     <div class="main-content">
         <article class="contact-info">
             <h2>Daniel Gaudreault</h2>
+            <h3>Packaging Machinery & Robotic Solutions Specialist</h3>
             <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:dgaudreault@capmatic.com">dgaudreault@capmatic.com</a></p>
             <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+15142918701">+1 514 291-8701</a></p>
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=12180+Albert-Hudon+Montreal+Qc+Canada+H1G+3K7" target="_blank">12180 Albert-Hudon Montreal, Qc., Canada, H1G 3K7</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> <a href="https://www.google.com/maps/search/?api=1&query=12180+Albert-Hudon+Montreal+Qc+Canada+H1G+3K7" target="_blank">12180 Albert-Hudon, Montreal, QC, Canada, H1G 3K7</a></p>
             <p><i class="fas fa-globe"></i> <strong>Web:</strong> <a href="http://www.capmatic.com" target="_blank">www.capmatic.com</a></p>
-            <h3><i class="fas fa-cogs"></i> PACKAGING MACHINERY & ROBOTIC SOLUTIONS</h3>
+            <p><strong>Let's Connect!</strong></p>
         </article>
     </div>
 
@@ -197,7 +199,6 @@
     </footer>
 
     <script>
-        // Function to display popup message
         function showMessage(event, platform) {
             event.preventDefault();
             Swal.fire({
@@ -212,7 +213,6 @@
             });
         }
 
-        // Function to navigate to home page
         function goToHomePage() {
             window.location.href = 'index.html';
         }
