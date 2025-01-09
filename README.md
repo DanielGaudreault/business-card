@@ -46,7 +46,7 @@ Feel free to fork this repository and create a pull request with your improvemen
 
 ---
 
-For any inquiries or feedback, please contact me at [your-email@example.com].
+For any inquiries or feedback, please contact me at [dan.gaudreault87@gmail.com].
 
 
 You can visit my business-card website [here](https://danielgaudreault.github.io/business-card/index.html).
