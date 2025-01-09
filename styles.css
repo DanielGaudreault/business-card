@@ -1,96 +1,159 @@
-/* Global Styles */
+:root {
+    --primary-color: #D32F2F; /* A deeper red */
+    --secondary-color: #FFC107; /* Gold for accents */
+    --text-color: white;
+    --background-color: rgba(0, 0, 0, 0.8);
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-large: 30px;
+    --font-size-base: 16px;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Light gray background */
-    color: #333;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('images/1920_1080_Black.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: var(--font-size-base);
 }
 
-header {
-    background-color: #007bff; /* Blue */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.home-link {
+    position: fixed;
+    top: var(--padding-small);
+    left: var(--padding-small);
+    z-index: 1000;
+    cursor: pointer;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.home-link img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ffd54f; /* Yellow on hover */
+.home-link img:hover {
+    transform: translateY(-10px) scale(1.1); /* Raise and slightly enlarge */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
 }
 
 .main-content {
-    margin: 20px auto;
-    width: 80%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-medium);
 }
 
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #007bff; /* Blue */
-    margin-bottom: 20px;
+.contact-info {
     text-align: center;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: var(--padding-large);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.about-me img {
-    border-radius: 50%;
-    margin-bottom: 20px;
+.contact-info h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: var(--padding-small);
 }
 
-.social-icons {
-    margin-top: 20px;
+.contact-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    margin-top: var(--padding-small);
+    font-weight: 600;
 }
 
-.social-icons a {
-    color: #007bff; /* Blue */
-    font-size: 24px;
-    margin-right: 10px;
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.2em; /* Increased font size */
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-    color: #ffd54f; /* Yellow on hover */
+.contact-info a:hover {
+    color: var(--secondary-color);
 }
 
 footer {
-    background-color: #007bff; /* Blue */
-    color: #fff;
-    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding-small) 0;
     text-align: center;
-    margin-top: 40px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
     margin: 0;
+    font-size: 0.8em;
+}
+
+.social-icons {
+    margin-top: var(--padding-small);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--padding-small);
+}
+
+.social-icon {
+    color: var(--text-color);
+    font-size: 24px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+    .contact-info {
+        padding: var(--padding-medium);
+    }
+    .contact-info h2 {
+        font-size: 1.5em;
+    }
+    .contact-info h3 {
+        font-size: 1em;
+    }
+    .home-link img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .contact-info {
+        padding: var(--padding-small);
+    }
+    .contact-info p {
+        font-size: 1em; /* Adjusted for smaller screens */
+    }
+    .social-icon {
+        font-size: 20px;
+    }
+    footer p {
+        font-size: 0.7em;
+    }
+    .home-link img {
+        width: 50px;
+        height: 50px;
+    }
 }
