@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Daniel Gaudreault's business card with contact info for packaging machinery solutions.">
     <meta name="keywords" content="packaging machinery, robotic solutions, Montreal, Capmatic">
+    <meta property="og:title" content="Daniel Gaudreault - Business Card">
+    <meta property="og:description" content="Contact information for Daniel Gaudreault, providing packaging machinery and robotic solutions.">
+    <meta property="og:image" content="images/capmatic.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniel Gaudreault - Business Card">
+    <meta name="twitter:description" content="Contact information for Daniel Gaudreault, providing packaging machinery and robotic solutions.">
+    <meta name="twitter:image" content="images/capmatic.png">
     <title>Daniel Gaudreault - Business Card</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -170,8 +178,8 @@
     </style>
 </head>
 <body>
-    <div class="home-link" onclick="goToHomePage()">
-        <img src="images/capmatic.png" alt="Home" loading="lazy">
+    <div class="home-link" aria-label="Home" onclick="goToHomePage()">
+        <img src="images/capmatic.png" alt="Capmatic logo">
     </div>
 
     <div class="main-content">
@@ -188,14 +196,13 @@
     <footer>
         <p>© 2025 Daniel Gaudreault. All rights reserved.</p>
         <div class="social-icons">
-            <a href="https://www.facebook.com/dan.gaudreault/" class="social-icon" onclick="showMessage('Facebook')"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/DGmovement87" class="social-icon" onclick="showMessage('Twitter')"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/daniel-gaudreault-373b67203/" class="social-icon" onclick="showMessage('LinkedIn')"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/DanielGaudreault/mywebsite" class="social-icon" onclick="showMessage('GitHub')"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/dgmovement87/" class="social-icon" onclick="showMessage('Instagram')"><i class="fab fa-instagram"></i></a>
-            <a href="https://m.me/dan.gaudreault" class="social-icon" onclick="showMessage('Messenger')"><i class="fab fa-facebook-messenger"></i></a>
-            <a href="https://discord.gg/SYd8vwV2" class="social-icon" onclick="showMessage('Discord')"><i class="fab fa-discord"></i></a>
-            <!-- Add more social icons as needed -->
+            <a href="https://www.facebook.com/dan.gaudreault/" class="social-icon" aria-label="Facebook" onclick="showMessage(event, 'Facebook')"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/DGmovement87" class="social-icon" aria-label="Twitter" onclick="showMessage(event, 'Twitter')"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/daniel-gaudreault-373b67203/" class="social-icon" aria-label="LinkedIn" onclick="showMessage(event, 'LinkedIn')"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/DanielGaudreault/mywebsite" class="social-icon" aria-label="GitHub" onclick="showMessage(event, 'GitHub')"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/dgmovement87/" class="social-icon" aria-label="Instagram" onclick="showMessage(event, 'Instagram')"><i class="fab fa-instagram"></i></a>
+            <a href="https://m.me/dan.gaudreault" class="social-icon" aria-label="Messenger" onclick="showMessage(event, 'Messenger')"><i class="fab fa-facebook-messenger"></i></a>
+            <a href="https://discord.gg/SYd8vwV2" class="social-icon" aria-label="Discord" onclick="showMessage(event, 'Discord')"><i class="fab fa-discord"></i></a>
         </div>
     </footer>
 
@@ -206,10 +213,11 @@
                 title: platform,
                 text: 'You clicked on ' + platform,
                 icon: 'info',
-                confirmButtonText: 'Close'
+                confirmButtonText: 'Visit ' + platform,
+                showCancelButton: true,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = event.target.href;
+                    window.open(event.target.closest('a').href, '_blank');
                 }
             });
         }
