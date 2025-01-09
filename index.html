@@ -199,7 +199,7 @@
 
     <script>
         function showMessage(event, platform) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent the default link behavior
             Swal.fire({
                 title: platform,
                 text: 'You clicked on ' + platform,
@@ -207,7 +207,8 @@
                 confirmButtonText: 'Close'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = event.target.href;
+                    // Navigate to the link after the user closes the alert
+                    window.location.href = event.currentTarget.href;
                 }
             });
         }
