@@ -20,162 +20,6 @@
     <link rel="icon" type="image/png" href="images/capmatic.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/capmatic.png">
     <link rel="manifest" href="manifest.json">
-
-    <style>
-        :root {
-            --primary-color: #D32F2F; /* A deeper red */
-            --secondary-color: #FFC107; /* Gold for accents */
-            --text-color: white;
-            --background-color: rgba(0, 0, 0, 0.8);
-            --padding-small: 10px;
-            --padding-medium: 20px;
-            --padding-large: 30px;
-            --font-size-base: 16px;
-        }
-
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('images/1920_1080_Black.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            line-height: 1.6;
-            font-size: var(--font-size-base);
-        }
-
-        .home-link {
-            position: fixed;
-            top: var(--padding-small);
-            left: var(--padding-small);
-            z-index: 1000;
-            cursor: pointer;
-        }
-
-        .home-link img {
-            width: 80px;
-            height: 80px;
-        }
-
-        .main-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: var(--padding-medium);
-        }
-
-        .contact-info {
-            text-align: center;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            padding: var(--padding-large);
-            border-radius: 12px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-info h2 {
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: var(--padding-small);
-        }
-
-        .contact-info h3 {
-            color: var(--secondary-color);
-            font-size: 1.2em;
-            margin-top: var(--padding-small);
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            margin: 10px 0;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        .contact-info a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: var(--secondary-color);
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            padding: var(--padding-small) 0;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.8em;
-        }
-
-        .social-icons {
-            margin-top: var(--padding-small);
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: var(--padding-small);
-        }
-
-        .social-icon {
-            color: var(--text-color);
-            font-size: 24px;
-            transition: color 0.3s ease;
-            cursor: pointer;
-        }
-
-        .social-icon:hover {
-            color: var(--secondary-color);
-        }
-
-        @media screen and (max-width: 768px) {
-            .contact-info {
-                padding: var(--padding-medium);
-            }
-            .contact-info h2 {
-                font-size: 1.5em;
-            }
-            .contact-info h3 {
-                font-size: 1em;
-            }
-            .home-link img {
-                width: 60px;
-                height: 60px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            body {
-                font-size: 14px;
-            }
-            .contact-info {
-                padding: var(--padding-small);
-            }
-            .contact-info p {
-                font-size: 1em; /* Adjusted for smaller screens */
-            }
-            .social-icon {
-                font-size: 20px;
-            }
-            footer p {
-                font-size: 0.7em;
-            }
-            .home-link img {
-                width: 50px;
-                height: 50px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="home-link" aria-label="Home" onclick="goToHomePage()">
@@ -199,10 +43,10 @@
             <a href="https://www.facebook.com/dan.gaudreault/" class="social-icon" aria-label="Facebook" onclick="showMessage(event, 'Facebook')"><i class="fab fa-facebook"></i></a>
             <a href="https://twitter.com/DGmovement87" class="social-icon" aria-label="Twitter" onclick="showMessage(event, 'Twitter')"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/daniel-gaudreault-373b67203/" class="social-icon" aria-label="LinkedIn" onclick="showMessage(event, 'LinkedIn')"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/DanielGaudreault" class="social-icon" aria-label="GitHub" onclick="showMessage(event, 'GitHub')"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/DanielGaudreault/mywebsite" class="social-icon" aria-label="GitHub" onclick="showMessage(event, 'GitHub')"><i class="fab fa-github"></i></a>
             <a href="https://www.instagram.com/dgmovement87/" class="social-icon" aria-label="Instagram" onclick="showMessage(event, 'Instagram')"><i class="fab fa-instagram"></i></a>
             <a href="https://m.me/dan.gaudreault" class="social-icon" aria-label="Messenger" onclick="showMessage(event, 'Messenger')"><i class="fab fa-facebook-messenger"></i></a>
-            <a href="https://discord.gg/KMPvjRGTvJ" class="social-icon" aria-label="Discord" onclick="showMessage(event, 'Discord')"><i class="fab fa-discord"></i></a>
+            <a href="https://discord.gg/SYd8vwV2" class="social-icon" aria-label="Discord" onclick="showMessage(event, 'Discord')"><i class="fab fa-discord"></i></a>
         </div>
     </footer>
 
